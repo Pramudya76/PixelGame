@@ -11,12 +11,14 @@ public class PlayerAttack : MonoBehaviour
     private float visionRange = 1f;
     private int rayCount = 6;
     public LayerMask layer;
+    private Animator EnemyAnimator;
     //private EnemyMovement EM;
     // Start is called before the first frame update
     void Start()
     {
         animator = GetComponent<Animator>();
         PM = GetComponent<PlayerMovement>();
+        EnemyAnimator = GameObject.FindWithTag("Enemy").GetComponent<Animator>();
         //EM = GameObject.FindWithTag("Enemy").GetComponent<EnemyMovement>();
     }
 
@@ -68,7 +70,8 @@ public class PlayerAttack : MonoBehaviour
                     EM.HealthEnemy -= 25f;
                     if (EM.HealthEnemy <= 0)
                     {
-                        Destroy(hit.collider.gameObject);
+                        EnemyAnimator.SetTrigger("Death");
+                        Destroy(hit.collider.gameObject, 1f);
                     }
                     Debug.Log("Nyala");
                     break;

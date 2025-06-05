@@ -14,7 +14,7 @@ public class PigInteraction : MonoBehaviour
     //private Vector3 offset = new Vector3(5, -1.5f, 0);
     private bool Active = false;
     public Transform Player;
-    private String[] textDialog = new string[] { "Halo Tuan", "Selamat Pagi", "Niggaaa" };
+    private String[] textDialog = new string[] { "Halo Tuan", "Selamat Pagi", "Bagaimana tidur mu?", "Apakah nyenyak?", "Apa yang ingin anda lakukan hari ini?" };
     public TextMeshProUGUI Text;
     private int indexDialog = 0;
     //public bool isTalk = false;
