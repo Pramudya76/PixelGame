@@ -17,9 +17,12 @@ public class PigInteraction : MonoBehaviour
     private String[] textDialog = new string[] { "Halo Tuan", "Selamat Pagi", "Niggaaa" };
     public TextMeshProUGUI Text;
     private int indexDialog = 0;
+    //public bool isTalk = false;
+    private PlayerMovement PM;
     // Start is called before the first frame update
     void Start()
     {
+        PM = GameObject.FindWithTag("Player").GetComponent<PlayerMovement>();
         Button.gameObject.SetActive(false);
         Dialog.gameObject.SetActive(false);
         Button.transform.position = Player.transform.position + new Vector3(0.7f, 0, 0);
@@ -51,6 +54,7 @@ public class PigInteraction : MonoBehaviour
             Active = true;
             indexDialog = 0;
             Text.text = textDialog[indexDialog];
+            PM.enabled = false;
         }
         if (Input.GetKeyDown(KeyCode.Return) && Active)
         {
@@ -58,12 +62,14 @@ public class PigInteraction : MonoBehaviour
             if (indexDialog < textDialog.Length)
             {
                 Text.text = textDialog[indexDialog];
+                PM.enabled = false;
             }
             else
             {
                 Dialog.gameObject.SetActive(false);
                 Active = false;
                 indexDialog = 0;
+                PM.enabled = true;
             }
         }
     }

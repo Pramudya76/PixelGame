@@ -8,8 +8,8 @@ public class PlayerMovement : MonoBehaviour
     private Rigidbody2D rb;
     private float moveSpeed = 3f;
     private Animator animator;
-    private float lastMoveX;
-    private float lastMoveY;
+    [HideInInspector] public float lastMoveX;
+    [HideInInspector] public float lastMoveY;
     // Start is called before the first frame update
     void Start()
     {
@@ -42,21 +42,6 @@ public class PlayerMovement : MonoBehaviour
             lastMoveY = moveY;
         }
 
-        if (Input.GetMouseButtonDown(0))
-        {
-            if (lastMoveX > 0 || lastMoveX < 0)
-            {
-                animator.SetTrigger("PlayerAttackSide");
-            }
-            else if (lastMoveY < 0)
-            {
-                animator.SetTrigger("AttackPlayer");
-            }
-            else if (lastMoveY > 0)
-            {
-                animator.SetTrigger("PlayerAttackTop");
-            }
-        }
         
     }
 }

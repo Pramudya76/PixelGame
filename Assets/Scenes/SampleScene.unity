@@ -130,9 +130,11 @@ GameObject:
   - component: {fileID: 135851583}
   - component: {fileID: 135851582}
   - component: {fileID: 135851584}
-  m_Layer: 0
+  - component: {fileID: 135851585}
+  - component: {fileID: 135851586}
+  m_Layer: 7
   m_Name: Slime
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -228,6 +230,78 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &135851585
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 135851581}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da1684362672d8a41b99c27f77c660f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  HealthEnemy: 100
+  layer:
+    serializedVersion: 2
+    m_Bits: 0
+--- !u!60 &135851586
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 135851581}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.375, y: 0.9375}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: -0.26270866, y: 0.41273403}
+      - {x: -0.46939945, y: 0.20656204}
+      - {x: -0.50051975, y: -0.15028572}
+      - {x: -0.16250992, y: -0.33559608}
+      - {x: 0.32883072, y: -0.35671902}
+      - {x: 0.45020866, y: -0.28825378}
+      - {x: 0.5254164, y: -0.025806427}
+      - {x: 0.45072842, y: 0.19437504}
+      - {x: 0.19502449, y: 0.43140602}
+  m_UseDelaunayMesh: 0
 --- !u!1 &165226843
 GameObject:
   m_ObjectHideFlags: 0
@@ -529,6 +603,7 @@ GameObject:
   - component: {fileID: 570617661}
   - component: {fileID: 570617663}
   - component: {fileID: 570617664}
+  - component: {fileID: 570617665}
   m_Layer: 6
   m_Name: Player
   m_TagString: Player
@@ -644,6 +719,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 95b16c15bb4e85c4d9674e6c6c43c74a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  lastMoveX: 0
+  lastMoveY: 0
 --- !u!60 &570617663
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -718,6 +795,21 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &570617665
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 570617658}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cc6579357dba0242bf6e7c3247ab32e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  layer:
+    serializedVersion: 2
+    m_Bits: 128
 --- !u!1 &778065054
 GameObject:
   m_ObjectHideFlags: 0
@@ -19276,7 +19368,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 16.03, y: 46.15}
+  m_AnchoredPosition: {x: 16.029999, y: 46.149994}
   m_SizeDelta: {x: -551.95, y: -220.29}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2015800695
@@ -19292,7 +19384,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.68235296}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
