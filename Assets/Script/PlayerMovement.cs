@@ -10,11 +10,14 @@ public class PlayerMovement : MonoBehaviour
     private Animator animator;
     [HideInInspector] public float lastMoveX;
     [HideInInspector] public float lastMoveY;
+    [HideInInspector] public float healthPlayer = 150f;
+    private UIManager UIManager;
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
+        UIManager = GameObject.FindWithTag("UIManager").GetComponent<UIManager>();
     }
 
     // Update is called once per frame
@@ -42,6 +45,11 @@ public class PlayerMovement : MonoBehaviour
             lastMoveY = moveY;
         }
 
+        if (healthPlayer <= 0)
+        {
+            UIManager.StartCoroutine(UIManager.CDGameOver());
+            Destroy(gameObject);
+        }
         
     }
 }

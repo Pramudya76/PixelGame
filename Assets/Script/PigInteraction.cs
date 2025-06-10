@@ -12,13 +12,14 @@ public class PigInteraction : MonoBehaviour
     private bool Press = false;
     public LayerMask layer;
     //private Vector3 offset = new Vector3(5, -1.5f, 0);
-    private bool Active = false;
+    [HideInInspector] public bool Active = false;
     public Transform Player;
     private String[] textDialog = new string[] { "Halo Tuan", "Selamat Pagi", "Bagaimana tidur mu?", "Apakah nyenyak?", "Apa yang ingin anda lakukan hari ini?" };
     public TextMeshProUGUI Text;
     private int indexDialog = 0;
     //public bool isTalk = false;
     private PlayerMovement PM;
+    [HideInInspector] public bool buttonActive = false; 
     // Start is called before the first frame update
     void Start()
     {
@@ -38,13 +39,15 @@ public class PigInteraction : MonoBehaviour
         {
             Press = true;
             Button.gameObject.SetActive(true);
+            buttonActive = true;
         }
-        else if (hit == null)
+        else if (hit == null && buttonActive)
         {
             Button.gameObject.SetActive(false);
             Dialog.gameObject.SetActive(false);
             Press = false;
             Active = false;
+            buttonActive = false;
         }
 
         if (Input.GetKeyDown(KeyCode.F) && Press && !Active)
