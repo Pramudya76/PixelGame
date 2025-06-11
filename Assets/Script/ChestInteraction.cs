@@ -10,10 +10,12 @@ public class ChestInteraction : MonoBehaviour
     private Vector3 offset = new Vector3(0, 1, 0);
     private PigInteraction PI;
     [HideInInspector] public bool aktif = false;
+    private UIManager UIManager;
     // Start is called before the first frame update
     void Start()
     {
         PI = GameObject.FindWithTag("Pig").GetComponent<PigInteraction>();
+        UIManager = GameObject.FindWithTag("UIManager").GetComponent<UIManager>();
         Button.gameObject.SetActive(false);
         Button.transform.position = Player.transform.position + new Vector3(0, 1, 0);;
     }
@@ -25,10 +27,7 @@ public class ChestInteraction : MonoBehaviour
         if (area != null && !PI.buttonActive)
         {
             aktif = true;
-            //Debug.Log("Terdeteksi" + area.gameObject.name);
-            Button.gameObject.SetActive(true);
-
-            //Debug.Log("Hollaaaa");
+            UIManager.ShowButton(transform.position + Vector3.up * 0.5f, this);
             if (Input.GetKeyDown(KeyCode.F))
             {
                 Button.gameObject.SetActive(false);
@@ -38,7 +37,7 @@ public class ChestInteraction : MonoBehaviour
         else if (area == null && aktif)
         {
             aktif = false;
-            Button.gameObject.SetActive(false);
+            UIManager.HideButton(this);
         }
     }
 

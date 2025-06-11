@@ -17,9 +17,10 @@ public class PigInteraction : MonoBehaviour
     private String[] textDialog = new string[] { "Halo Tuan", "Selamat Pagi", "Bagaimana tidur mu?", "Apakah nyenyak?", "Apa yang ingin anda lakukan hari ini?" };
     public TextMeshProUGUI Text;
     private int indexDialog = 0;
+    private UIManager UIManager;
     //public bool isTalk = false;
     private PlayerMovement PM;
-    [HideInInspector] public bool buttonActive = false; 
+    [HideInInspector] public bool buttonActive = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -28,6 +29,7 @@ public class PigInteraction : MonoBehaviour
         Dialog.gameObject.SetActive(false);
         Button.transform.position = Player.transform.position + new Vector3(0.7f, 0, 0);
         Dialog.transform.position = transform.position + new Vector3(5, -1, 0);
+        UIManager = GameObject.FindWithTag("UIManager").GetComponent<UIManager>();
     }
 
     // Update is called once per frame
@@ -35,19 +37,18 @@ public class PigInteraction : MonoBehaviour
     {
 
         Collider2D hit = Physics2D.OverlapCircle(transform.position, 1f, layer);
-        if (hit != null && !Active)
+        if (hit != null)
         {
             Press = true;
-            Button.gameObject.SetActive(true);
             buttonActive = true;
+            UIManager.ShowButton(transform.position + Vector3.up * 0.5f, this);
         }
         else if (hit == null && buttonActive)
         {
-            Button.gameObject.SetActive(false);
-            Dialog.gameObject.SetActive(false);
-            Press = false;
             Active = false;
+            Press = false;
             buttonActive = false;
+            UIManager.HideButton(this);
         }
 
         if (Input.GetKeyDown(KeyCode.F) && Press && !Active)

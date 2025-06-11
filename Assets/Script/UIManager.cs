@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class UIManager : MonoBehaviour
@@ -7,6 +8,8 @@ public class UIManager : MonoBehaviour
     public GameObject gameover;
     public GameObject Button;
     private RiceHarvest RH;
+    private PigInteraction PI;
+    private ChestInteraction CI;
     // Start is called before the first frame update
     void Start()
     {
@@ -37,7 +40,21 @@ public class UIManager : MonoBehaviour
         Button.transform.position = pos;
     }
 
-    public void HideButton(RiceHarvest RHSource) 
+    public void ShowButton(Vector3 pos, PigInteraction pigInteraction)
+    {
+        PI = pigInteraction;
+        Button.gameObject.SetActive(true);
+        Button.transform.position = pos;
+    }
+
+    public void ShowButton(Vector3 pos, ChestInteraction chestInteraction)
+    {
+        CI = chestInteraction;
+        Button.gameObject.SetActive(true);
+        Button.transform.position = pos;
+    }
+
+    public void HideButton(RiceHarvest RHSource)
     {
         if (RHSource == RH)
         {
@@ -45,5 +62,47 @@ public class UIManager : MonoBehaviour
             RH = null;
         }
     }
+
+    public void HideButton(PigInteraction pigInteraction)
+    {
+        if (pigInteraction == PI)
+        {
+            Button.gameObject.SetActive(false);
+            PI = null;
+        }
+    }
+
+    public void HideButton(ChestInteraction chestInteraction)
+    {
+        if (chestInteraction == CI)
+        {
+            Button.gameObject.SetActive(false);
+            CI = null;
+        }
+    }
+
+    public bool IsThisActiveRice(RiceHarvest riceHarvest)
+    {
+        return RH == riceHarvest;
+    }
+
+    public void IsThisNotActiveRice(RiceHarvest riceHarvest)
+    {
+        if (RH == riceHarvest)
+        {
+            RH = null;
+        }
+    }
+
+    public void ResetAllNear()
+    {
+        RiceHarvest[] allRices = FindObjectsOfType<RiceHarvest>();
+        foreach (var rice in allRices)
+        {
+            rice.isNear = false;
+        }
+    }
+
+
 
 }
