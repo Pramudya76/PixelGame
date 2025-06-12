@@ -7,6 +7,8 @@ TagManager:
   - Enemy
   - Pig
   - UIManager
+  - Chest
+  - InventoryManager
   layers:
   - Default
   - TransparentFX

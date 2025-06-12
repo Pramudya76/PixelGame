@@ -10,10 +10,13 @@ public class UIManager : MonoBehaviour
     private RiceHarvest RH;
     private PigInteraction PI;
     private ChestInteraction CI;
+    public GameObject Inventory;
+    private bool isOpen = false;
     // Start is called before the first frame update
     void Start()
     {
         gameover.gameObject.SetActive(false);
+        Inventory.gameObject.SetActive(false);
     }
 
     // Update is called once per frame
@@ -103,6 +106,18 @@ public class UIManager : MonoBehaviour
         }
     }
 
-
+    public void MainInventory()
+    {
+        if (!isOpen)
+        {
+            Inventory.gameObject.SetActive(true);
+            isOpen = true;
+        }
+        else
+        {
+            Inventory.gameObject.SetActive(false);
+            isOpen = false;
+        }
+    }
 
 }

@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.Events;
 
 public class ChestInteraction : MonoBehaviour
 {
@@ -11,11 +13,15 @@ public class ChestInteraction : MonoBehaviour
     private PigInteraction PI;
     [HideInInspector] public bool aktif = false;
     private UIManager UIManager;
+    public Sprite dropItem;
+    
+    private PrototypeInventory ItemSlotManager;
     // Start is called before the first frame update
     void Start()
     {
         PI = GameObject.FindWithTag("Pig").GetComponent<PigInteraction>();
         UIManager = GameObject.FindWithTag("UIManager").GetComponent<UIManager>();
+        ItemSlotManager = GameObject.FindWithTag("InventoryManager").GetComponent<PrototypeInventory>();
         Button.gameObject.SetActive(false);
         Button.transform.position = Player.transform.position + new Vector3(0, 1, 0);;
     }
@@ -30,6 +36,7 @@ public class ChestInteraction : MonoBehaviour
             UIManager.ShowButton(transform.position + Vector3.up * 0.5f, this);
             if (Input.GetKeyDown(KeyCode.F))
             {
+                ItemSlotManager.AddItem(dropItem);
                 Button.gameObject.SetActive(false);
                 Destroy(gameObject);
             }
