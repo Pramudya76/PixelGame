@@ -8,10 +8,13 @@ public class RiceHarvest : MonoBehaviour
     public GameObject Button;
     [HideInInspector] public bool isNear = false;
     private UIManager UIManager;
+    private PrototypeInventory itemSlotManager;
+    public ItemData objectDrop;
     // Start is called before the first frame update
     void Start()
     {
         UIManager = GameObject.FindWithTag("UIManager").GetComponent<UIManager>();
+        itemSlotManager = GameObject.FindWithTag("InventoryManager").GetComponent<PrototypeInventory>();
         Button.gameObject.SetActive(false);
     }
 
@@ -35,7 +38,9 @@ public class RiceHarvest : MonoBehaviour
                 isNear = false;
                 UIManager.HideButton(this);
                 UIManager.ResetAllNear();
+                itemSlotManager.AddItem(objectDrop);
                 Destroy(gameObject);
+
                 //StartCoroutine(CDDestroy());
             }
         }

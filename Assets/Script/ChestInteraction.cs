@@ -13,7 +13,7 @@ public class ChestInteraction : MonoBehaviour
     private PigInteraction PI;
     [HideInInspector] public bool aktif = false;
     private UIManager UIManager;
-    public Sprite dropItem;
+    public ItemData dropItem;
     
     private PrototypeInventory ItemSlotManager;
     // Start is called before the first frame update

@@ -746,6 +746,7 @@ MonoBehaviour:
     m_Bits: 64
   Button: {fileID: 778065054}
   isNear: 0
+  objectDrop: {fileID: 11400000, guid: 0c83cf277889d964292c9b0994b02f37, type: 2}
 --- !u!212 &96885130
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1610,6 +1611,7 @@ MonoBehaviour:
     m_Bits: 64
   Button: {fileID: 778065054}
   isNear: 0
+  objectDrop: {fileID: 11400000, guid: 0c83cf277889d964292c9b0994b02f37, type: 2}
 --- !u!212 &228044438
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2094,6 +2096,7 @@ MonoBehaviour:
     m_Bits: 64
   Button: {fileID: 778065054}
   isNear: 0
+  objectDrop: {fileID: 11400000, guid: 0c83cf277889d964292c9b0994b02f37, type: 2}
 --- !u!212 &343026881
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3133,6 +3136,7 @@ MonoBehaviour:
     m_Bits: 64
   Button: {fileID: 778065054}
   isNear: 0
+  objectDrop: {fileID: 11400000, guid: 0c83cf277889d964292c9b0994b02f37, type: 2}
 --- !u!212 &631741483
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3467,7 +3471,7 @@ MonoBehaviour:
   Button: {fileID: 778065054}
   Player: {fileID: 570617660}
   aktif: 0
-  dropItem: {fileID: 7777503053789551968, guid: 67909861cfaede34fa762a065c5d27dc, type: 3}
+  dropItem: {fileID: 11400000, guid: faf1384577494c24cbf2a20d2a34854b, type: 2}
 --- !u!60 &674306892
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -3697,6 +3701,7 @@ MonoBehaviour:
     m_Bits: 64
   Button: {fileID: 778065054}
   isNear: 0
+  objectDrop: {fileID: 11400000, guid: 0c83cf277889d964292c9b0994b02f37, type: 2}
 --- !u!212 &698885991
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -28843,6 +28848,7 @@ MonoBehaviour:
     m_Bits: 64
   Button: {fileID: 778065054}
   isNear: 0
+  objectDrop: {fileID: 11400000, guid: 0c83cf277889d964292c9b0994b02f37, type: 2}
 --- !u!212 &1218556907
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -28999,6 +29005,7 @@ MonoBehaviour:
     m_Bits: 64
   Button: {fileID: 778065054}
   isNear: 0
+  objectDrop: {fileID: 11400000, guid: 0c83cf277889d964292c9b0994b02f37, type: 2}
 --- !u!212 &1224337388
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -29155,6 +29162,7 @@ MonoBehaviour:
     m_Bits: 64
   Button: {fileID: 778065054}
   isNear: 0
+  objectDrop: {fileID: 11400000, guid: 0c83cf277889d964292c9b0994b02f37, type: 2}
 --- !u!212 &1245729376
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -30194,6 +30202,7 @@ MonoBehaviour:
     m_Bits: 64
   Button: {fileID: 778065054}
   isNear: 0
+  objectDrop: {fileID: 11400000, guid: 0c83cf277889d964292c9b0994b02f37, type: 2}
 --- !u!212 &1298873664
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -30559,6 +30568,7 @@ MonoBehaviour:
     m_Bits: 64
   Button: {fileID: 778065054}
   isNear: 0
+  objectDrop: {fileID: 11400000, guid: 0c83cf277889d964292c9b0994b02f37, type: 2}
 --- !u!212 &1331743680
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -31294,6 +31304,7 @@ MonoBehaviour:
     m_Bits: 64
   Button: {fileID: 778065054}
   isNear: 0
+  objectDrop: {fileID: 11400000, guid: 0c83cf277889d964292c9b0994b02f37, type: 2}
 --- !u!212 &1497531818
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -31562,6 +31573,7 @@ MonoBehaviour:
     m_Bits: 64
   Button: {fileID: 778065054}
   isNear: 0
+  objectDrop: {fileID: 11400000, guid: 0c83cf277889d964292c9b0994b02f37, type: 2}
 --- !u!212 &1547171716
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -32215,6 +32227,7 @@ MonoBehaviour:
     m_Bits: 64
   Button: {fileID: 778065054}
   isNear: 0
+  objectDrop: {fileID: 11400000, guid: 0c83cf277889d964292c9b0994b02f37, type: 2}
 --- !u!212 &1724673325
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -32503,6 +32516,7 @@ MonoBehaviour:
     m_Bits: 64
   Button: {fileID: 778065054}
   isNear: 0
+  objectDrop: {fileID: 11400000, guid: 0c83cf277889d964292c9b0994b02f37, type: 2}
 --- !u!212 &1742288986
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -32776,6 +32790,7 @@ MonoBehaviour:
     m_Bits: 64
   Button: {fileID: 778065054}
   isNear: 0
+  objectDrop: {fileID: 11400000, guid: 0c83cf277889d964292c9b0994b02f37, type: 2}
 --- !u!212 &1812142191
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -33039,6 +33054,7 @@ MonoBehaviour:
     m_Bits: 64
   Button: {fileID: 778065054}
   isNear: 0
+  objectDrop: {fileID: 11400000, guid: 0c83cf277889d964292c9b0994b02f37, type: 2}
 --- !u!212 &1817417534
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -33297,6 +33313,7 @@ MonoBehaviour:
     m_Bits: 64
   Button: {fileID: 778065054}
   isNear: 0
+  objectDrop: {fileID: 11400000, guid: 0c83cf277889d964292c9b0994b02f37, type: 2}
 --- !u!212 &1832777857
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -33509,6 +33526,7 @@ MonoBehaviour:
     m_Bits: 64
   Button: {fileID: 778065054}
   isNear: 0
+  objectDrop: {fileID: 11400000, guid: 0c83cf277889d964292c9b0994b02f37, type: 2}
 --- !u!212 &1853881226
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -33772,6 +33790,7 @@ MonoBehaviour:
     m_Bits: 64
   Button: {fileID: 778065054}
   isNear: 0
+  objectDrop: {fileID: 11400000, guid: 0c83cf277889d964292c9b0994b02f37, type: 2}
 --- !u!212 &1969026119
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -34422,6 +34441,7 @@ MonoBehaviour:
     m_Bits: 64
   Button: {fileID: 778065054}
   isNear: 0
+  objectDrop: {fileID: 11400000, guid: 0c83cf277889d964292c9b0994b02f37, type: 2}
 --- !u!212 &2100887355
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -34620,7 +34640,7 @@ MonoBehaviour:
   Button: {fileID: 778065054}
   Player: {fileID: 570617660}
   aktif: 0
-  dropItem: {fileID: -1423420836228586722, guid: 67909861cfaede34fa762a065c5d27dc, type: 3}
+  dropItem: {fileID: 11400000, guid: 0c83cf277889d964292c9b0994b02f37, type: 2}
 --- !u!60 &2144656563
 PolygonCollider2D:
   m_ObjectHideFlags: 0
