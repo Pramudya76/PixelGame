@@ -89,13 +89,13 @@ public class UIManager : MonoBehaviour
         return RH == riceHarvest;
     }
 
-    public void IsThisNotActiveRice(RiceHarvest riceHarvest)
-    {
-        if (RH == riceHarvest)
-        {
-            RH = null;
-        }
-    }
+    // public void IsThisNotActiveRice(RiceHarvest riceHarvest)
+    // {
+    //     if (RH == riceHarvest)
+    //     {
+    //         RH = null;
+    //     }
+    // }
 
     public void ResetAllNear()
     {

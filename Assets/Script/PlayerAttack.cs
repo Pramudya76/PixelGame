@@ -12,6 +12,8 @@ public class PlayerAttack : MonoBehaviour
     private int rayCount = 6;
     public LayerMask layer;
     private Animator EnemyAnimator;
+    private PrototypeInventory PI;
+    private EnemyMovement EM;
     //private EnemyMovement EM;
     // Start is called before the first frame update
     void Start()
@@ -19,7 +21,8 @@ public class PlayerAttack : MonoBehaviour
         animator = GetComponent<Animator>();
         PM = GetComponent<PlayerMovement>();
         EnemyAnimator = GameObject.FindWithTag("Enemy").GetComponent<Animator>();
-        //EM = GameObject.FindWithTag("Enemy").GetComponent<EnemyMovement>();
+        PI = GameObject.FindWithTag("InventoryManager").GetComponent<PrototypeInventory>();
+        EM = GameObject.FindWithTag("Enemy").GetComponent<EnemyMovement>();
     }
 
     // Update is called once per frame
@@ -71,6 +74,7 @@ public class PlayerAttack : MonoBehaviour
                     if (EM.HealthEnemy <= 0)
                     {
                         EnemyAnimator.SetTrigger("Death");
+                        PI.AddItem(EM.itemDrop);
                         Destroy(hit.collider.gameObject, 1f);
                     }
                     Debug.Log("Nyala");

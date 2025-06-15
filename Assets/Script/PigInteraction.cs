@@ -4,6 +4,8 @@ using System.Collections.Generic;
 using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.UI;
+
 
 public class PigInteraction : MonoBehaviour
 {
@@ -20,6 +22,11 @@ public class PigInteraction : MonoBehaviour
     private UIManager UIManager;
     //public bool isTalk = false;
     private PlayerMovement PM;
+    public ItemData itemData;
+    public GameObject DialogImage;
+    public TextMeshProUGUI Name;
+    public GameObject ImageDialog;
+    public GameObject DialogText;
     [HideInInspector] public bool buttonActive = false;
     // Start is called before the first frame update
     void Start()
@@ -27,8 +34,8 @@ public class PigInteraction : MonoBehaviour
         PM = GameObject.FindWithTag("Player").GetComponent<PlayerMovement>();
         Button.gameObject.SetActive(false);
         Dialog.gameObject.SetActive(false);
-        Button.transform.position = Player.transform.position + new Vector3(0.7f, 0, 0);
-        Dialog.transform.position = transform.position + new Vector3(5, -1, 0);
+        // Button.transform.position = Player.transform.position + new Vector3(0.7f, 0, 0);
+        // Dialog.transform.position = transform.position + new Vector3(5, -1, 0);
         UIManager = GameObject.FindWithTag("UIManager").GetComponent<UIManager>();
     }
 
@@ -57,6 +64,16 @@ public class PigInteraction : MonoBehaviour
             Dialog.gameObject.SetActive(true);
             Active = true;
             indexDialog = 0;
+            DialogImage.GetComponent<Image>().sprite = itemData.Icon;
+            if (itemData.name == "Player")
+            {
+                DialogImage.transform.rotation = Quaternion.Euler(0, 0, 0);
+            }else {
+                ImageDialog.transform.position = ImageDialog.transform.position + new Vector3(20, 0, 0);
+                DialogText.transform.position = new Vector3(-5.7f, 1, 0);
+                DialogImage.transform.rotation = Quaternion.Euler(0, 0, 0);
+            }
+            Name.text = itemData.nameItem;
             Text.text = textDialog[indexDialog];
             PM.enabled = false;
         }
