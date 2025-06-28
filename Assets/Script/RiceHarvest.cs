@@ -1,20 +1,32 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class RiceHarvest : MonoBehaviour
 {
     public LayerMask layer;
-    public GameObject Button;
+    private GameObject Button;
     [HideInInspector] public bool isNear = false;
     private UIManager UIManager;
     private PrototypeInventory itemSlotManager;
     public ItemData objectDrop;
+    public ItemData seedRice;
+    private GameManager GM;
     // Start is called before the first frame update
     void Start()
     {
         UIManager = GameObject.FindWithTag("UIManager").GetComponent<UIManager>();
         itemSlotManager = GameObject.FindWithTag("InventoryManager").GetComponent<PrototypeInventory>();
+        GM = GameObject.FindWithTag("GameManager").GetComponent<GameManager>();
+        if (Button == null)
+        {
+            GameObject ButtonObjt = GameObject.FindWithTag("ButtonF");
+            if (ButtonObjt != null)
+            {
+                Button = ButtonObjt.GetComponent<GameObject>();
+            }
+        }
         Button.gameObject.SetActive(false);
     }
 
@@ -35,10 +47,16 @@ public class RiceHarvest : MonoBehaviour
             }
             if (Input.GetKeyDown(KeyCode.F) && UIManager.IsThisActiveRice(this))
             {
+                int random = Random.Range(1, 3);
                 isNear = false;
                 UIManager.HideButton(this);
                 UIManager.ResetAllNear();
                 itemSlotManager.AddItem(objectDrop);
+                if (random == 1)
+                {
+                    itemSlotManager.AddItem(seedRice);
+                }
+                GM.RemoveRice(this.gameObject);
                 Destroy(gameObject);
 
                 //StartCoroutine(CDDestroy());

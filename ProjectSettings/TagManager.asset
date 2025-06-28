@@ -9,6 +9,8 @@ TagManager:
   - UIManager
   - Chest
   - InventoryManager
+  - GameManager
+  - ButtonF
   layers:
   - Default
   - TransparentFX

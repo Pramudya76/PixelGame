@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -15,7 +16,7 @@ public class PrototypeInventory : MonoBehaviour
     void Start()
     {
         //CI = GameObject.FindWithTag("Chest").GetComponent<ChestInteraction>();
-        
+
     }
 
     // Update is called once per frame
@@ -70,5 +71,22 @@ public class PrototypeInventory : MonoBehaviour
         //     }
         // }
     }
+
+    public bool hasItem(String itemName)
+    {
+        foreach (GameObject slot in images) {
+            if (slot.transform.childCount > 0)
+            {
+                DragItem inventory = slot.transform.GetChild(0).GetComponent<DragItem>();
+                if (inventory != null && inventory.itemData.name == itemName)
+                {
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
+
+
 
 }
