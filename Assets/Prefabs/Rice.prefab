@@ -77,7 +77,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -7124156328152321891, guid: 67909861cfaede34fa762a065c5d27dc, type: 3}
+  m_Sprite: {fileID: 3703259055243465117, guid: 67909861cfaede34fa762a065c5d27dc, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -103,10 +103,14 @@ MonoBehaviour:
   layer:
     serializedVersion: 2
     m_Bits: 64
-  Button: {fileID: 0}
   isNear: 0
   objectDrop: {fileID: 11400000, guid: 0c83cf277889d964292c9b0994b02f37, type: 2}
   seedRice: {fileID: 11400000, guid: c6ef3ffe3fa1e0d40902dbc0e17653e5, type: 2}
+  isHarvest: 0
+  seed: {fileID: 3703259055243465117, guid: 67909861cfaede34fa762a065c5d27dc, type: 3}
+  fase1: {fileID: -1724842945715286110, guid: 67909861cfaede34fa762a065c5d27dc, type: 3}
+  fase2: {fileID: 2447717276745128951, guid: 67909861cfaede34fa762a065c5d27dc, type: 3}
+  rice: {fileID: -7124156328152321891, guid: 67909861cfaede34fa762a065c5d27dc, type: 3}
 --- !u!60 &3892876361692022715
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -145,7 +149,7 @@ PolygonCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.9375, y: 1}
+    oldSize: {x: 0.9375, y: 0.5625}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0

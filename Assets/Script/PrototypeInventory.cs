@@ -74,7 +74,8 @@ public class PrototypeInventory : MonoBehaviour
 
     public bool hasItem(String itemName)
     {
-        foreach (GameObject slot in images) {
+        foreach (GameObject slot in images)
+        {
             if (slot.transform.childCount > 0)
             {
                 DragItem inventory = slot.transform.GetChild(0).GetComponent<DragItem>();
@@ -85,6 +86,57 @@ public class PrototypeInventory : MonoBehaviour
             }
         }
         return false;
+    }
+    
+    public void RemoveItem(ItemData itemData)
+    {
+        foreach (GameObject slot in images)
+        {
+            if (slot.transform.childCount > 0)
+            {
+                DragItem itemExiting = slot.transform.GetChild(0).GetComponent<DragItem>();
+                if (itemExiting != null && itemExiting.itemData == itemData)
+                {
+                    itemExiting.counts--;
+                    itemExiting.UpdateText();
+                    if (itemExiting.counts <= 0)
+                    {
+                        Destroy(itemExiting.gameObject);
+                    }
+                    return;
+                }
+            }
+        }
+
+        // foreach (GameObject slot in images)
+        // {
+        //     if (slot.transform.childCount == 0)
+        //     {
+        //         GameObject newItem = Instantiate(imagePrefabs, slot.transform);
+        //         Image img = newItem.GetComponent<Image>();
+        //         img.sprite = itemData.Icon;
+
+        //         DragItem dragItem = newItem.AddComponent<DragItem>();
+        //         dragItem.itemData = itemData;
+        //         dragItem.counts = 1;
+        //         dragItem.stackText = newItem.GetComponentInChildren<TextMeshProUGUI>();
+        //         dragItem.UpdateText();
+
+        //         newItem.transform.localPosition = Vector3.zero;
+        //         return;
+        //     }
+        // }
+        // for (int a = 0; a < images.Length; a++)
+        // {
+        //     if (images[a].transform.childCount == 0)
+        //     {
+        //         GameObject newItem = Instantiate(imagePrefabs, images[a].transform);
+        //         newItem.GetComponent<Image>().sprite = itemData.Icon;
+        //         newItem.AddComponent<DragItem>();
+        //         newItem.transform.localPosition = Vector3.zero;
+        //         break;
+        //     }
+        // }
     }
 
 

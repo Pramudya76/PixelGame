@@ -11,6 +11,8 @@ TagManager:
   - InventoryManager
   - GameManager
   - ButtonF
+  - Seeds
+  - Rices
   layers:
   - Default
   - TransparentFX

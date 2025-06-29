@@ -29,12 +29,10 @@ public class GameManager : MonoBehaviour
                     seeds[a].gameObject.SetActive(true);
                 }
             }
-            else
+            else if(rices[a] != null)
             {
-                if (seeds[a] == null)
-                {
-                    seeds[a].gameObject.SetActive(false);
-                }
+                seeds[a].gameObject.SetActive(false);
+                
             }
         }
     }

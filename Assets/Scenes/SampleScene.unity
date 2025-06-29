@@ -356,7 +356,7 @@ Transform:
   m_GameObject: {fileID: 28272010}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.7323227, y: -0.7033863, z: 0}
+  m_LocalPosition: {x: -3.7323227, y: -0.7033863, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -859,7 +859,7 @@ PolygonCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.9375, y: 1}
+    oldSize: {x: 0.9375, y: 0.5625}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -890,6 +890,11 @@ MonoBehaviour:
   isNear: 0
   objectDrop: {fileID: 11400000, guid: 0c83cf277889d964292c9b0994b02f37, type: 2}
   seedRice: {fileID: 11400000, guid: c6ef3ffe3fa1e0d40902dbc0e17653e5, type: 2}
+  isHarvest: 0
+  seed: {fileID: 3703259055243465117, guid: 67909861cfaede34fa762a065c5d27dc, type: 3}
+  fase1: {fileID: -1724842945715286110, guid: 67909861cfaede34fa762a065c5d27dc, type: 3}
+  fase2: {fileID: 2447717276745128951, guid: 67909861cfaede34fa762a065c5d27dc, type: 3}
+  rice: {fileID: -7124156328152321891, guid: 67909861cfaede34fa762a065c5d27dc, type: 3}
 --- !u!212 &96885130
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -933,7 +938,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -7124156328152321891, guid: 67909861cfaede34fa762a065c5d27dc, type: 3}
+  m_Sprite: {fileID: 3703259055243465117, guid: 67909861cfaede34fa762a065c5d27dc, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1725,7 +1730,7 @@ PolygonCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.9375, y: 1}
+    oldSize: {x: 0.9375, y: 0.5625}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -1756,6 +1761,11 @@ MonoBehaviour:
   isNear: 0
   objectDrop: {fileID: 11400000, guid: 0c83cf277889d964292c9b0994b02f37, type: 2}
   seedRice: {fileID: 11400000, guid: c6ef3ffe3fa1e0d40902dbc0e17653e5, type: 2}
+  isHarvest: 0
+  seed: {fileID: 3703259055243465117, guid: 67909861cfaede34fa762a065c5d27dc, type: 3}
+  fase1: {fileID: -1724842945715286110, guid: 67909861cfaede34fa762a065c5d27dc, type: 3}
+  fase2: {fileID: 2447717276745128951, guid: 67909861cfaede34fa762a065c5d27dc, type: 3}
+  rice: {fileID: -7124156328152321891, guid: 67909861cfaede34fa762a065c5d27dc, type: 3}
 --- !u!212 &228044438
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1799,7 +1809,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -7124156328152321891, guid: 67909861cfaede34fa762a065c5d27dc, type: 3}
+  m_Sprite: {fileID: 3703259055243465117, guid: 67909861cfaede34fa762a065c5d27dc, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1913,7 +1923,7 @@ Transform:
   m_GameObject: {fileID: 231990317}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.7323227, y: -2.7033863, z: 0}
+  m_LocalPosition: {x: -3.7323227, y: -2.7033863, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2333,7 +2343,7 @@ Transform:
   m_GameObject: {fileID: 269949853}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.7323227, y: -0.7033863, z: 0}
+  m_LocalPosition: {x: -1.7323227, y: -0.7033863, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2632,7 +2642,7 @@ PolygonCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.9375, y: 1}
+    oldSize: {x: 0.9375, y: 0.5625}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -2663,6 +2673,11 @@ MonoBehaviour:
   isNear: 0
   objectDrop: {fileID: 11400000, guid: 0c83cf277889d964292c9b0994b02f37, type: 2}
   seedRice: {fileID: 11400000, guid: c6ef3ffe3fa1e0d40902dbc0e17653e5, type: 2}
+  isHarvest: 0
+  seed: {fileID: 3703259055243465117, guid: 67909861cfaede34fa762a065c5d27dc, type: 3}
+  fase1: {fileID: -1724842945715286110, guid: 67909861cfaede34fa762a065c5d27dc, type: 3}
+  fase2: {fileID: 2447717276745128951, guid: 67909861cfaede34fa762a065c5d27dc, type: 3}
+  rice: {fileID: -7124156328152321891, guid: 67909861cfaede34fa762a065c5d27dc, type: 3}
 --- !u!212 &343026881
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2706,7 +2721,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -7124156328152321891, guid: 67909861cfaede34fa762a065c5d27dc, type: 3}
+  m_Sprite: {fileID: 3703259055243465117, guid: 67909861cfaede34fa762a065c5d27dc, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -2755,7 +2770,7 @@ Transform:
   m_GameObject: {fileID: 408979571}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.7323227, y: 0.2966137, z: 0}
+  m_LocalPosition: {x: -2.7323227, y: 0.2966137, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4037,7 +4052,7 @@ Transform:
   m_GameObject: {fileID: 612549404}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3.7323227, y: 0.2966137, z: 0}
+  m_LocalPosition: {x: -0.7323227, y: 1.2966137, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4261,7 +4276,7 @@ PolygonCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.9375, y: 1}
+    oldSize: {x: 0.9375, y: 0.5625}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -4292,6 +4307,11 @@ MonoBehaviour:
   isNear: 0
   objectDrop: {fileID: 11400000, guid: 0c83cf277889d964292c9b0994b02f37, type: 2}
   seedRice: {fileID: 11400000, guid: c6ef3ffe3fa1e0d40902dbc0e17653e5, type: 2}
+  isHarvest: 0
+  seed: {fileID: 3703259055243465117, guid: 67909861cfaede34fa762a065c5d27dc, type: 3}
+  fase1: {fileID: -1724842945715286110, guid: 67909861cfaede34fa762a065c5d27dc, type: 3}
+  fase2: {fileID: 2447717276745128951, guid: 67909861cfaede34fa762a065c5d27dc, type: 3}
+  rice: {fileID: -7124156328152321891, guid: 67909861cfaede34fa762a065c5d27dc, type: 3}
 --- !u!212 &631741483
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -4335,7 +4355,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -7124156328152321891, guid: 67909861cfaede34fa762a065c5d27dc, type: 3}
+  m_Sprite: {fileID: 3703259055243465117, guid: 67909861cfaede34fa762a065c5d27dc, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -4826,7 +4846,7 @@ PolygonCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.9375, y: 1}
+    oldSize: {x: 0.9375, y: 0.5625}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -4857,6 +4877,11 @@ MonoBehaviour:
   isNear: 0
   objectDrop: {fileID: 11400000, guid: 0c83cf277889d964292c9b0994b02f37, type: 2}
   seedRice: {fileID: 11400000, guid: c6ef3ffe3fa1e0d40902dbc0e17653e5, type: 2}
+  isHarvest: 0
+  seed: {fileID: 3703259055243465117, guid: 67909861cfaede34fa762a065c5d27dc, type: 3}
+  fase1: {fileID: -1724842945715286110, guid: 67909861cfaede34fa762a065c5d27dc, type: 3}
+  fase2: {fileID: 2447717276745128951, guid: 67909861cfaede34fa762a065c5d27dc, type: 3}
+  rice: {fileID: -7124156328152321891, guid: 67909861cfaede34fa762a065c5d27dc, type: 3}
 --- !u!212 &698885991
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -4900,7 +4925,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -7124156328152321891, guid: 67909861cfaede34fa762a065c5d27dc, type: 3}
+  m_Sprite: {fileID: 3703259055243465117, guid: 67909861cfaede34fa762a065c5d27dc, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -5056,7 +5081,7 @@ Transform:
   m_GameObject: {fileID: 776538333}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.7323227, y: -1.7033863, z: 0}
+  m_LocalPosition: {x: -3.7323227, y: -1.7033863, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5541,7 +5566,7 @@ GameObject:
   - component: {fileID: 867332836}
   m_Layer: 0
   m_Name: Rices
-  m_TagString: Untagged
+  m_TagString: Rices
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5710,7 +5735,7 @@ Transform:
   m_GameObject: {fileID: 898151420}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.7323227, y: -1.7033863, z: 0}
+  m_LocalPosition: {x: -1.7323227, y: -1.7033863, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5939,7 +5964,7 @@ Transform:
   m_GameObject: {fileID: 931078401}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3.7323227, y: -2.7033863, z: 0}
+  m_LocalPosition: {x: -0.7323227, y: -1.7033863, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -6496,7 +6521,7 @@ Transform:
   m_GameObject: {fileID: 1017733609}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.7323227, y: -1.7033863, z: 0}
+  m_LocalPosition: {x: -2.7323227, y: -1.7033863, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -116788,7 +116813,7 @@ PolygonCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.9375, y: 1}
+    oldSize: {x: 0.9375, y: 0.5625}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -116819,6 +116844,11 @@ MonoBehaviour:
   isNear: 0
   objectDrop: {fileID: 11400000, guid: 0c83cf277889d964292c9b0994b02f37, type: 2}
   seedRice: {fileID: 11400000, guid: c6ef3ffe3fa1e0d40902dbc0e17653e5, type: 2}
+  isHarvest: 0
+  seed: {fileID: 3703259055243465117, guid: 67909861cfaede34fa762a065c5d27dc, type: 3}
+  fase1: {fileID: -1724842945715286110, guid: 67909861cfaede34fa762a065c5d27dc, type: 3}
+  fase2: {fileID: 2447717276745128951, guid: 67909861cfaede34fa762a065c5d27dc, type: 3}
+  rice: {fileID: -7124156328152321891, guid: 67909861cfaede34fa762a065c5d27dc, type: 3}
 --- !u!212 &1218556907
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -116862,7 +116892,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -7124156328152321891, guid: 67909861cfaede34fa762a065c5d27dc, type: 3}
+  m_Sprite: {fileID: 3703259055243465117, guid: 67909861cfaede34fa762a065c5d27dc, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -116945,7 +116975,7 @@ PolygonCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.9375, y: 1}
+    oldSize: {x: 0.9375, y: 0.5625}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -116976,6 +117006,11 @@ MonoBehaviour:
   isNear: 0
   objectDrop: {fileID: 11400000, guid: 0c83cf277889d964292c9b0994b02f37, type: 2}
   seedRice: {fileID: 11400000, guid: c6ef3ffe3fa1e0d40902dbc0e17653e5, type: 2}
+  isHarvest: 0
+  seed: {fileID: 3703259055243465117, guid: 67909861cfaede34fa762a065c5d27dc, type: 3}
+  fase1: {fileID: -1724842945715286110, guid: 67909861cfaede34fa762a065c5d27dc, type: 3}
+  fase2: {fileID: 2447717276745128951, guid: 67909861cfaede34fa762a065c5d27dc, type: 3}
+  rice: {fileID: -7124156328152321891, guid: 67909861cfaede34fa762a065c5d27dc, type: 3}
 --- !u!212 &1224337388
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -117019,7 +117054,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -7124156328152321891, guid: 67909861cfaede34fa762a065c5d27dc, type: 3}
+  m_Sprite: {fileID: 3703259055243465117, guid: 67909861cfaede34fa762a065c5d27dc, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -117102,7 +117137,7 @@ PolygonCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.9375, y: 1}
+    oldSize: {x: 0.9375, y: 0.5625}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -117133,6 +117168,11 @@ MonoBehaviour:
   isNear: 0
   objectDrop: {fileID: 11400000, guid: 0c83cf277889d964292c9b0994b02f37, type: 2}
   seedRice: {fileID: 11400000, guid: c6ef3ffe3fa1e0d40902dbc0e17653e5, type: 2}
+  isHarvest: 0
+  seed: {fileID: 3703259055243465117, guid: 67909861cfaede34fa762a065c5d27dc, type: 3}
+  fase1: {fileID: -1724842945715286110, guid: 67909861cfaede34fa762a065c5d27dc, type: 3}
+  fase2: {fileID: 2447717276745128951, guid: 67909861cfaede34fa762a065c5d27dc, type: 3}
+  rice: {fileID: -7124156328152321891, guid: 67909861cfaede34fa762a065c5d27dc, type: 3}
 --- !u!212 &1245729376
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -117176,7 +117216,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -7124156328152321891, guid: 67909861cfaede34fa762a065c5d27dc, type: 3}
+  m_Sprite: {fileID: 3703259055243465117, guid: 67909861cfaede34fa762a065c5d27dc, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -121680,7 +121720,7 @@ Transform:
   m_GameObject: {fileID: 1262983994}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.7323227, y: 0.2966137, z: 0}
+  m_LocalPosition: {x: -1.7323227, y: 0.2966137, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -121867,7 +121907,7 @@ PolygonCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.9375, y: 1}
+    oldSize: {x: 0.9375, y: 0.5625}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -121898,6 +121938,11 @@ MonoBehaviour:
   isNear: 0
   objectDrop: {fileID: 11400000, guid: 0c83cf277889d964292c9b0994b02f37, type: 2}
   seedRice: {fileID: 11400000, guid: c6ef3ffe3fa1e0d40902dbc0e17653e5, type: 2}
+  isHarvest: 0
+  seed: {fileID: 3703259055243465117, guid: 67909861cfaede34fa762a065c5d27dc, type: 3}
+  fase1: {fileID: -1724842945715286110, guid: 67909861cfaede34fa762a065c5d27dc, type: 3}
+  fase2: {fileID: 2447717276745128951, guid: 67909861cfaede34fa762a065c5d27dc, type: 3}
+  rice: {fileID: -7124156328152321891, guid: 67909861cfaede34fa762a065c5d27dc, type: 3}
 --- !u!212 &1298873664
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -121941,7 +121986,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -7124156328152321891, guid: 67909861cfaede34fa762a065c5d27dc, type: 3}
+  m_Sprite: {fileID: 3703259055243465117, guid: 67909861cfaede34fa762a065c5d27dc, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -122189,7 +122234,7 @@ Transform:
   m_GameObject: {fileID: 1330920419}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.7323227, y: 1.2966137, z: 0}
+  m_LocalPosition: {x: -0.7323227, y: -2.7033863, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -122376,7 +122421,7 @@ PolygonCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.9375, y: 1}
+    oldSize: {x: 0.9375, y: 0.5625}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -122407,6 +122452,11 @@ MonoBehaviour:
   isNear: 0
   objectDrop: {fileID: 11400000, guid: 0c83cf277889d964292c9b0994b02f37, type: 2}
   seedRice: {fileID: 11400000, guid: c6ef3ffe3fa1e0d40902dbc0e17653e5, type: 2}
+  isHarvest: 0
+  seed: {fileID: 3703259055243465117, guid: 67909861cfaede34fa762a065c5d27dc, type: 3}
+  fase1: {fileID: -1724842945715286110, guid: 67909861cfaede34fa762a065c5d27dc, type: 3}
+  fase2: {fileID: 2447717276745128951, guid: 67909861cfaede34fa762a065c5d27dc, type: 3}
+  rice: {fileID: -7124156328152321891, guid: 67909861cfaede34fa762a065c5d27dc, type: 3}
 --- !u!212 &1331743680
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -122450,7 +122500,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -7124156328152321891, guid: 67909861cfaede34fa762a065c5d27dc, type: 3}
+  m_Sprite: {fileID: 3703259055243465117, guid: 67909861cfaede34fa762a065c5d27dc, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -122745,7 +122795,7 @@ Transform:
   m_GameObject: {fileID: 1407910653}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.7323227, y: 1.2966137, z: 0}
+  m_LocalPosition: {x: -1.7323227, y: 1.2966137, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -122888,7 +122938,7 @@ Transform:
   m_GameObject: {fileID: 1429924323}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.7323227, y: -2.7033863, z: 0}
+  m_LocalPosition: {x: -1.7323227, y: -2.7033863, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -123662,7 +123712,7 @@ PolygonCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.9375, y: 1}
+    oldSize: {x: 0.9375, y: 0.5625}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -123693,6 +123743,11 @@ MonoBehaviour:
   isNear: 0
   objectDrop: {fileID: 11400000, guid: 0c83cf277889d964292c9b0994b02f37, type: 2}
   seedRice: {fileID: 11400000, guid: c6ef3ffe3fa1e0d40902dbc0e17653e5, type: 2}
+  isHarvest: 0
+  seed: {fileID: 3703259055243465117, guid: 67909861cfaede34fa762a065c5d27dc, type: 3}
+  fase1: {fileID: -1724842945715286110, guid: 67909861cfaede34fa762a065c5d27dc, type: 3}
+  fase2: {fileID: 2447717276745128951, guid: 67909861cfaede34fa762a065c5d27dc, type: 3}
+  rice: {fileID: -7124156328152321891, guid: 67909861cfaede34fa762a065c5d27dc, type: 3}
 --- !u!212 &1547171716
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -123736,7 +123791,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -7124156328152321891, guid: 67909861cfaede34fa762a065c5d27dc, type: 3}
+  m_Sprite: {fileID: 3703259055243465117, guid: 67909861cfaede34fa762a065c5d27dc, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -123894,7 +123949,7 @@ GameObject:
   - component: {fileID: 1566032266}
   m_Layer: 0
   m_Name: Seeds
-  m_TagString: Untagged
+  m_TagString: Seeds
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -124069,7 +124124,7 @@ Transform:
   m_GameObject: {fileID: 1617969980}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3.7323227, y: -1.7033863, z: 0}
+  m_LocalPosition: {x: -0.7323227, y: -0.7033863, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -124319,7 +124374,7 @@ Transform:
   m_GameObject: {fileID: 1645817280}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.7323227, y: 0.2966137, z: 0}
+  m_LocalPosition: {x: -3.7323227, y: 0.2966137, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -124462,7 +124517,7 @@ Transform:
   m_GameObject: {fileID: 1671741216}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3.7323227, y: -0.7033863, z: 0}
+  m_LocalPosition: {x: -0.7323227, y: 0.2966137, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -124939,7 +124994,7 @@ PolygonCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.9375, y: 1}
+    oldSize: {x: 0.9375, y: 0.5625}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -124970,6 +125025,11 @@ MonoBehaviour:
   isNear: 0
   objectDrop: {fileID: 11400000, guid: 0c83cf277889d964292c9b0994b02f37, type: 2}
   seedRice: {fileID: 11400000, guid: c6ef3ffe3fa1e0d40902dbc0e17653e5, type: 2}
+  isHarvest: 0
+  seed: {fileID: 3703259055243465117, guid: 67909861cfaede34fa762a065c5d27dc, type: 3}
+  fase1: {fileID: -1724842945715286110, guid: 67909861cfaede34fa762a065c5d27dc, type: 3}
+  fase2: {fileID: 2447717276745128951, guid: 67909861cfaede34fa762a065c5d27dc, type: 3}
+  rice: {fileID: -7124156328152321891, guid: 67909861cfaede34fa762a065c5d27dc, type: 3}
 --- !u!212 &1724673325
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -125013,7 +125073,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -7124156328152321891, guid: 67909861cfaede34fa762a065c5d27dc, type: 3}
+  m_Sprite: {fileID: 3703259055243465117, guid: 67909861cfaede34fa762a065c5d27dc, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -125184,7 +125244,7 @@ Transform:
   m_GameObject: {fileID: 1732675167}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.7323227, y: -0.7033863, z: 0}
+  m_LocalPosition: {x: -2.7323227, y: -0.7033863, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -125371,7 +125431,7 @@ PolygonCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.9375, y: 1}
+    oldSize: {x: 0.9375, y: 0.5625}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -125402,6 +125462,11 @@ MonoBehaviour:
   isNear: 0
   objectDrop: {fileID: 11400000, guid: 0c83cf277889d964292c9b0994b02f37, type: 2}
   seedRice: {fileID: 11400000, guid: c6ef3ffe3fa1e0d40902dbc0e17653e5, type: 2}
+  isHarvest: 0
+  seed: {fileID: 3703259055243465117, guid: 67909861cfaede34fa762a065c5d27dc, type: 3}
+  fase1: {fileID: -1724842945715286110, guid: 67909861cfaede34fa762a065c5d27dc, type: 3}
+  fase2: {fileID: 2447717276745128951, guid: 67909861cfaede34fa762a065c5d27dc, type: 3}
+  rice: {fileID: -7124156328152321891, guid: 67909861cfaede34fa762a065c5d27dc, type: 3}
 --- !u!212 &1742288986
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -125445,7 +125510,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -7124156328152321891, guid: 67909861cfaede34fa762a065c5d27dc, type: 3}
+  m_Sprite: {fileID: 3703259055243465117, guid: 67909861cfaede34fa762a065c5d27dc, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -125645,7 +125710,7 @@ PolygonCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.9375, y: 1}
+    oldSize: {x: 0.9375, y: 0.5625}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -125676,6 +125741,11 @@ MonoBehaviour:
   isNear: 0
   objectDrop: {fileID: 11400000, guid: 0c83cf277889d964292c9b0994b02f37, type: 2}
   seedRice: {fileID: 11400000, guid: c6ef3ffe3fa1e0d40902dbc0e17653e5, type: 2}
+  isHarvest: 0
+  seed: {fileID: 3703259055243465117, guid: 67909861cfaede34fa762a065c5d27dc, type: 3}
+  fase1: {fileID: -1724842945715286110, guid: 67909861cfaede34fa762a065c5d27dc, type: 3}
+  fase2: {fileID: 2447717276745128951, guid: 67909861cfaede34fa762a065c5d27dc, type: 3}
+  rice: {fileID: -7124156328152321891, guid: 67909861cfaede34fa762a065c5d27dc, type: 3}
 --- !u!212 &1812142191
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -125719,7 +125789,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -7124156328152321891, guid: 67909861cfaede34fa762a065c5d27dc, type: 3}
+  m_Sprite: {fileID: 3703259055243465117, guid: 67909861cfaede34fa762a065c5d27dc, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -125909,7 +125979,7 @@ PolygonCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.9375, y: 1}
+    oldSize: {x: 0.9375, y: 0.5625}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -125940,6 +126010,11 @@ MonoBehaviour:
   isNear: 0
   objectDrop: {fileID: 11400000, guid: 0c83cf277889d964292c9b0994b02f37, type: 2}
   seedRice: {fileID: 11400000, guid: c6ef3ffe3fa1e0d40902dbc0e17653e5, type: 2}
+  isHarvest: 0
+  seed: {fileID: 3703259055243465117, guid: 67909861cfaede34fa762a065c5d27dc, type: 3}
+  fase1: {fileID: -1724842945715286110, guid: 67909861cfaede34fa762a065c5d27dc, type: 3}
+  fase2: {fileID: 2447717276745128951, guid: 67909861cfaede34fa762a065c5d27dc, type: 3}
+  rice: {fileID: -7124156328152321891, guid: 67909861cfaede34fa762a065c5d27dc, type: 3}
 --- !u!212 &1817417534
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -125983,7 +126058,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -7124156328152321891, guid: 67909861cfaede34fa762a065c5d27dc, type: 3}
+  m_Sprite: {fileID: 3703259055243465117, guid: 67909861cfaede34fa762a065c5d27dc, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -126168,7 +126243,7 @@ PolygonCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.9375, y: 1}
+    oldSize: {x: 0.9375, y: 0.5625}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -126199,6 +126274,11 @@ MonoBehaviour:
   isNear: 0
   objectDrop: {fileID: 11400000, guid: 0c83cf277889d964292c9b0994b02f37, type: 2}
   seedRice: {fileID: 11400000, guid: c6ef3ffe3fa1e0d40902dbc0e17653e5, type: 2}
+  isHarvest: 0
+  seed: {fileID: 3703259055243465117, guid: 67909861cfaede34fa762a065c5d27dc, type: 3}
+  fase1: {fileID: -1724842945715286110, guid: 67909861cfaede34fa762a065c5d27dc, type: 3}
+  fase2: {fileID: 2447717276745128951, guid: 67909861cfaede34fa762a065c5d27dc, type: 3}
+  rice: {fileID: -7124156328152321891, guid: 67909861cfaede34fa762a065c5d27dc, type: 3}
 --- !u!212 &1832777857
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -126242,7 +126322,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -7124156328152321891, guid: 67909861cfaede34fa762a065c5d27dc, type: 3}
+  m_Sprite: {fileID: 3703259055243465117, guid: 67909861cfaede34fa762a065c5d27dc, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -126363,7 +126443,7 @@ PolygonCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.9375, y: 1}
+    oldSize: {x: 0.9375, y: 0.5625}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -126394,6 +126474,11 @@ MonoBehaviour:
   isNear: 0
   objectDrop: {fileID: 11400000, guid: 0c83cf277889d964292c9b0994b02f37, type: 2}
   seedRice: {fileID: 11400000, guid: c6ef3ffe3fa1e0d40902dbc0e17653e5, type: 2}
+  isHarvest: 0
+  seed: {fileID: 3703259055243465117, guid: 67909861cfaede34fa762a065c5d27dc, type: 3}
+  fase1: {fileID: -1724842945715286110, guid: 67909861cfaede34fa762a065c5d27dc, type: 3}
+  fase2: {fileID: 2447717276745128951, guid: 67909861cfaede34fa762a065c5d27dc, type: 3}
+  rice: {fileID: -7124156328152321891, guid: 67909861cfaede34fa762a065c5d27dc, type: 3}
 --- !u!212 &1853881226
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -126437,7 +126522,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -7124156328152321891, guid: 67909861cfaede34fa762a065c5d27dc, type: 3}
+  m_Sprite: {fileID: 3703259055243465117, guid: 67909861cfaede34fa762a065c5d27dc, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -126627,7 +126712,7 @@ PolygonCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.9375, y: 1}
+    oldSize: {x: 0.9375, y: 0.5625}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -126658,6 +126743,11 @@ MonoBehaviour:
   isNear: 0
   objectDrop: {fileID: 11400000, guid: 0c83cf277889d964292c9b0994b02f37, type: 2}
   seedRice: {fileID: 11400000, guid: c6ef3ffe3fa1e0d40902dbc0e17653e5, type: 2}
+  isHarvest: 0
+  seed: {fileID: 3703259055243465117, guid: 67909861cfaede34fa762a065c5d27dc, type: 3}
+  fase1: {fileID: -1724842945715286110, guid: 67909861cfaede34fa762a065c5d27dc, type: 3}
+  fase2: {fileID: 2447717276745128951, guid: 67909861cfaede34fa762a065c5d27dc, type: 3}
+  rice: {fileID: -7124156328152321891, guid: 67909861cfaede34fa762a065c5d27dc, type: 3}
 --- !u!212 &1969026119
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -126701,7 +126791,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -7124156328152321891, guid: 67909861cfaede34fa762a065c5d27dc, type: 3}
+  m_Sprite: {fileID: 3703259055243465117, guid: 67909861cfaede34fa762a065c5d27dc, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -127170,7 +127260,7 @@ Transform:
   m_GameObject: {fileID: 2085534936}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.7323227, y: -2.7033863, z: 0}
+  m_LocalPosition: {x: -2.7323227, y: -2.7033863, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -127459,7 +127549,7 @@ PolygonCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.9375, y: 1}
+    oldSize: {x: 0.9375, y: 0.5625}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -127490,6 +127580,11 @@ MonoBehaviour:
   isNear: 0
   objectDrop: {fileID: 11400000, guid: 0c83cf277889d964292c9b0994b02f37, type: 2}
   seedRice: {fileID: 11400000, guid: c6ef3ffe3fa1e0d40902dbc0e17653e5, type: 2}
+  isHarvest: 0
+  seed: {fileID: 3703259055243465117, guid: 67909861cfaede34fa762a065c5d27dc, type: 3}
+  fase1: {fileID: -1724842945715286110, guid: 67909861cfaede34fa762a065c5d27dc, type: 3}
+  fase2: {fileID: 2447717276745128951, guid: 67909861cfaede34fa762a065c5d27dc, type: 3}
+  rice: {fileID: -7124156328152321891, guid: 67909861cfaede34fa762a065c5d27dc, type: 3}
 --- !u!212 &2100887355
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -127533,7 +127628,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -7124156328152321891, guid: 67909861cfaede34fa762a065c5d27dc, type: 3}
+  m_Sprite: {fileID: 3703259055243465117, guid: 67909861cfaede34fa762a065c5d27dc, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

@@ -120,6 +120,7 @@ public class UIManager : MonoBehaviour
         foreach (var rice in allRices)
         {
             rice.isNear = false;
+            rice.isHarvest = false;
         }
     }
 

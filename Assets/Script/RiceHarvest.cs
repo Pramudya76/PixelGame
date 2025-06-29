@@ -13,39 +13,72 @@ public class RiceHarvest : MonoBehaviour
     public ItemData objectDrop;
     public ItemData seedRice;
     private GameManager GM;
+    [HideInInspector] public bool isHarvest = false;
+    private float waktuMulai;
+    private SpriteRenderer sr;
+    public Sprite seed;
+    public Sprite fase1;
+    public Sprite fase2;
+    public Sprite rice;
     // Start is called before the first frame update
     void Start()
     {
         UIManager = GameObject.FindWithTag("UIManager").GetComponent<UIManager>();
         itemSlotManager = GameObject.FindWithTag("InventoryManager").GetComponent<PrototypeInventory>();
         GM = GameObject.FindWithTag("GameManager").GetComponent<GameManager>();
+        sr = gameObject.GetComponent<SpriteRenderer>();
         if (Button == null)
         {
             GameObject ButtonObjt = GameObject.FindWithTag("ButtonF");
             if (ButtonObjt != null)
             {
-                Button = ButtonObjt.GetComponent<GameObject>();
+                Button = ButtonObjt;
             }
         }
-        Button.gameObject.SetActive(false);
+        if (Button != null)
+        {
+            Button.gameObject.SetActive(false);
+        }
+        waktuMulai = Time.time;
     }
 
     // Update is called once per frame
     void Update()
     {
-        Collider2D areaHarvest = Physics2D.OverlapCircle(transform.position, 0.4f, layer);
+        if (!isHarvest)
+        {
+            if (Time.time - waktuMulai < 60f)
+            {
+                sr.sprite = seed;
+            }
+            else if (Time.time - waktuMulai >= 60f && Time.time - waktuMulai < 90)
+            {
+                sr.sprite = fase1;
+            }
+            else if (Time.time - waktuMulai >= 90 && Time.time - waktuMulai < 120)
+            {
+                sr.sprite = fase2;
+            }
+            else
+            {
+                sr.sprite = rice;
+                isHarvest = true;
+            }
+        }
+
+        Collider2D areaHarvest = Physics2D.OverlapCircle(transform.position, 0.15f, layer);
         if (areaHarvest != null)
         {
-            if (!isNear)
+            if (!isNear && isHarvest)
             {
                 isNear = true;
                 UIManager.ShowButton(transform.position + Vector3.up * 0.5f, this);
             }
-            else if (UIManager.IsThisActiveRice(this))
+            else if (UIManager.IsThisActiveRice(this) && isHarvest)
             {
                 UIManager.ShowButton(transform.position + Vector3.up * 0.5f, this);
             }
-            if (Input.GetKeyDown(KeyCode.F) && UIManager.IsThisActiveRice(this))
+            if (Input.GetKeyDown(KeyCode.F) && UIManager.IsThisActiveRice(this) && isHarvest)
             {
                 int random = Random.Range(1, 3);
                 isNear = false;
@@ -79,6 +112,6 @@ public class RiceHarvest : MonoBehaviour
     void OnDrawGizmos()
     {
         Gizmos.color = Color.red;
-        Gizmos.DrawWireSphere(transform.position, 0.4f);       
+        Gizmos.DrawWireSphere(transform.position, 0.15f);       
     }
 }
