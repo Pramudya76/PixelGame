@@ -19,7 +19,7 @@ public class ItemSlot : MonoBehaviour, IDropHandler
             Dropped.transform.SetParent(transform, false);
             DragItem dragItem = Dropped.GetComponent<DragItem>();
             dragItem.parentAfterDrag = transform;
-
+            
         }
     }
     

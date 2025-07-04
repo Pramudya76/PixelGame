@@ -11,6 +11,7 @@ public class UIManager : MonoBehaviour
     private PigInteraction PI;
     private ChestInteraction CI;
     private SeedItem SI;
+    private NpcTransaction NT;
     public GameObject Inventory;
     private bool isOpen = false;
     // Start is called before the first frame update
@@ -65,6 +66,13 @@ public class UIManager : MonoBehaviour
         Button.transform.position = pos;
     }
 
+    public void ShowButton(Vector3 pos, NpcTransaction npcTransaction)
+    {
+        NT = npcTransaction;
+        Button.gameObject.SetActive(true);
+        Button.transform.position = pos;
+    }
+
     public void HideButton(RiceHarvest RHSource)
     {
         if (RHSource == RH)
@@ -98,6 +106,15 @@ public class UIManager : MonoBehaviour
         {
             Button.gameObject.SetActive(false);
             SI = null;
+        }
+    }
+
+    public void HideButton(NpcTransaction npcTransaction)
+    {
+        if (npcTransaction == NT)
+        {
+            Button.gameObject.SetActive(false);
+            NT = null;
         }
     }
 

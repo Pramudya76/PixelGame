@@ -27,6 +27,7 @@ public class PrototypeInventory : MonoBehaviour
 
     public void AddItem(ItemData itemData)
     {
+        //Debug.Log("Menambahkan item: " + itemData.nameItem);
         foreach (GameObject slot in images)
         {
             if (slot.transform.childCount > 0)
@@ -79,7 +80,7 @@ public class PrototypeInventory : MonoBehaviour
             if (slot.transform.childCount > 0)
             {
                 DragItem inventory = slot.transform.GetChild(0).GetComponent<DragItem>();
-                if (inventory != null && inventory.itemData.name == itemName)
+                if (inventory != null && inventory.itemData.nameItem == itemName)
                 {
                     return true;
                 }
@@ -87,7 +88,7 @@ public class PrototypeInventory : MonoBehaviour
         }
         return false;
     }
-    
+
     public void RemoveItem(ItemData itemData)
     {
         foreach (GameObject slot in images)
@@ -137,6 +138,32 @@ public class PrototypeInventory : MonoBehaviour
         //         break;
         //     }
         // }
+    }
+
+
+    public bool itemTransaction(ItemData itemName, int amount) 
+    {
+        foreach (var slot in images) {
+            if (slot.transform.childCount > 0)
+            {
+                DragItem dragItem = slot.transform.GetChild(0).GetComponent<DragItem>();
+                //Debug.Log("Cek item: " + dragItem.itemData.nameItem + ", jumlah: " + dragItem.counts);
+                if (dragItem != null && dragItem.itemData == itemName)
+                {
+                    if (dragItem.counts >= amount)
+                    {
+                        dragItem.counts -= amount;
+                        dragItem.UpdateText();
+                        if (dragItem.counts <= 0)
+                        {
+                            Destroy(dragItem.gameObject);
+                        }
+                        return true;
+                    }
+                }
+            }
+        }
+        return false;
     }
 
 

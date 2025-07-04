@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb69fe35892640445a9b8ea091d45def, type: 3}
   m_Name: Wheat
   m_EditorClassIdentifier: 
-  nameItem: Wheet
+  nameItem: Wheat
   Icon: {fileID: 7777503053789551968, guid: 67909861cfaede34fa762a065c5d27dc, type: 3}
   maxStack: 64

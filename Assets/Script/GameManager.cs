@@ -8,6 +8,7 @@ public class GameManager : MonoBehaviour
 {
     public GameObject[] rices;
     public GameObject[] seeds;
+    public GameObject TransactionPanel;
     // Start is called before the first frame update
     void Start()
     {
@@ -29,10 +30,10 @@ public class GameManager : MonoBehaviour
                     seeds[a].gameObject.SetActive(true);
                 }
             }
-            else if(rices[a] != null)
+            else if (rices[a] != null)
             {
                 seeds[a].gameObject.SetActive(false);
-                
+
             }
         }
     }
@@ -60,6 +61,11 @@ public class GameManager : MonoBehaviour
                 return;
             }
         }
+    }
+
+    public void TransactionPanelOff()
+    {
+        TransactionPanel.gameObject.SetActive(false);
     }
 
 }

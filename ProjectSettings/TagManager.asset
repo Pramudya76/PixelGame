@@ -13,6 +13,7 @@ TagManager:
   - ButtonF
   - Seeds
   - Rices
+  - Npc
   layers:
   - Default
   - TransparentFX
@@ -22,7 +23,7 @@ TagManager:
   - UI
   - Player
   - Enemy
-  - 
+  - Npc
   - 
   - 
   - 
