@@ -102,7 +102,7 @@ public class UIManager : MonoBehaviour
 
     public void HideButton(SeedItem seedItem)
     {
-        if (seedItem == RH)
+        if (seedItem == SI)
         {
             Button.gameObject.SetActive(false);
             SI = null;

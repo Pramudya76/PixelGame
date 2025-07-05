@@ -27,30 +27,31 @@ public class SeedItem : MonoBehaviour
     void Update()
     {
         Collider2D area = Physics2D.OverlapCircle(transform.position, 0.15f, layer);
-        if (area != null && PI.hasItem(Seeds.name))
+        if (area != null && PI.hasItem(Seeds.nameItem))
         {
             UIManager.ShowButton(transform.position, this);
-            if (PI.hasItem(Seeds.name))
+            //Button.gameObject.SetActive(true)
+;            // if (!isSeed)
+            // {
+            //     isSeed = true;
+            //     UIManager.ShowButton(transform.position, this);
+            // }
+            if (Input.GetKeyDown(KeyCode.F))
             {
-                if (!isSeed)
-                {
-                    isSeed = true;
-                    UIManager.ShowButton(transform.position, this);
-                }
-                if (Input.GetKeyDown(KeyCode.F))
-                {
-                    GameObject rice = Instantiate(Rice, transform.position, Quaternion.identity, RicesTransform.transform);
-                    PI.RemoveItem(Seeds);
-                    GM.AddRice(rice);
-                    isSeed = false;
-                    UIManager.HideButton(this);
-                }
+                GameObject rice = Instantiate(Rice, transform.position, Quaternion.identity, RicesTransform.transform);
+                PI.RemoveItem(Seeds);
+                GM.AddRice(rice);
+                //isSeed = false;
+                UIManager.HideButton(this);
             }
+            //Debug.Log(isSeed);
+
         }
         else
         {
-            isSeed = false;
+            //isSeed = false;
             UIManager.HideButton(this);
+            //Button.gameObject.SetActive(false);
         }
     }
 

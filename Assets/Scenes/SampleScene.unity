@@ -128703,6 +128703,8 @@ MonoBehaviour:
   ImagePrefabs: {fileID: 871469421280332267, guid: 79838489329b5a94fb1b0429df133c8c, type: 3}
   carrot: {fileID: 11400000, guid: faf1384577494c24cbf2a20d2a34854b, type: 2}
   wheat: {fileID: 11400000, guid: 0c83cf277889d964292c9b0994b02f37, type: 2}
+  Gold: {fileID: 11400000, guid: a96020aa89b327843998644379400228, type: 2}
+  Iron: {fileID: 11400000, guid: 15bc2a1affa61914ea927943deaa4e20, type: 2}
   positionResultSlot: {fileID: 89957659}
 --- !u!1 &1812142187
 GameObject:
