@@ -20,6 +20,7 @@ public class RiceHarvest : MonoBehaviour
     public Sprite fase1;
     public Sprite fase2;
     public Sprite rice;
+    //public int index;
     // Start is called before the first frame update
     void Start()
     {
@@ -47,15 +48,15 @@ public class RiceHarvest : MonoBehaviour
     {
         if (!isHarvest)
         {
-            if (Time.time - waktuMulai < 60f)
+            if (Time.time - waktuMulai < 10f)
             {
                 sr.sprite = seed;
             }
-            else if (Time.time - waktuMulai >= 60f && Time.time - waktuMulai < 90)
+            else if (Time.time - waktuMulai >= 10f && Time.time - waktuMulai < 20)
             {
                 sr.sprite = fase1;
             }
-            else if (Time.time - waktuMulai >= 90 && Time.time - waktuMulai < 120)
+            else if (Time.time - waktuMulai >= 20 && Time.time - waktuMulai < 30)
             {
                 sr.sprite = fase2;
             }

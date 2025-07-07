@@ -32,19 +32,23 @@ public class GameManager : MonoBehaviour
             }
             else if (rices[a] != null)
             {
-                seeds[a].gameObject.SetActive(false);
+                if (seeds[a] != null)
+                {
+                    seeds[a].gameObject.SetActive(false);
+                }
 
             }
         }
     }
 
-    public void AddRice(GameObject newRice)
+    public void AddRice(GameObject newRice, int index)
     {
         for (int a = 0; a < rices.Length; a++)
         {
-            if (rices[a] == null)
+            if (rices[index] == null)
             {
-                rices[a] = newRice;
+                rices[index] = newRice;
+                //seeds[a] = null;
                 return;
             }
         }
@@ -58,6 +62,7 @@ public class GameManager : MonoBehaviour
             {
                 Destroy(rices[a]);
                 rices[a] = null;
+                //seeds[a] = Rices;
                 return;
             }
         }

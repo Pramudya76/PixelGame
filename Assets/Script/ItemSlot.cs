@@ -13,7 +13,7 @@ public class ItemSlot : MonoBehaviour, IDropHandler
 
     public void OnDrop(PointerEventData eventData)
     {
-        if (transform.childCount <= 1)
+        if (transform.childCount < 1)
         {
             GameObject Dropped = eventData.pointerDrag;
             Dropped.transform.SetParent(transform, false);

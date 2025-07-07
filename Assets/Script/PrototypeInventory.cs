@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Video;
@@ -10,6 +11,7 @@ public class PrototypeInventory : MonoBehaviour
 {
     //private ChestInteraction CI;
     public GameObject[] images;
+    public GameObject[] slotTransaksi;
     public GameObject imagePrefabs;
     //public ItemData itemData;
     // Start is called before the first frame update
@@ -141,9 +143,10 @@ public class PrototypeInventory : MonoBehaviour
     }
 
 
-    public bool itemTransaction(ItemData itemName, int amount) 
+    public bool itemTransaction(ItemData itemName, int amount)
     {
-        foreach (var slot in images) {
+        foreach (var slot in slotTransaksi)
+        {
             if (slot.transform.childCount > 0)
             {
                 DragItem dragItem = slot.transform.GetChild(0).GetComponent<DragItem>();
@@ -164,6 +167,20 @@ public class PrototypeInventory : MonoBehaviour
             }
         }
         return false;
+    }
+
+    public int getItemCount(ItemData itemData)
+    {
+        //Debug.Log("dragItem.counts");
+        foreach (GameObject transaksi in slotTransaksi)
+        {
+            DragItem dragItem = transaksi.GetComponent<DragItem>();
+            if (dragItem != null && dragItem.itemData.nameItem == itemData.nameItem)
+            {
+                return dragItem.counts;
+            }
+        }
+        return 0;
     }
 
 

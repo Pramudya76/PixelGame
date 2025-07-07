@@ -13,6 +13,7 @@ public class SeedItem : MonoBehaviour
     public GameObject Button;
     [HideInInspector] public bool isSeed = false;
     private GameObject RicesTransform;
+    public int index;
     // Start is called before the first frame update
     void Start()
     {
@@ -40,7 +41,7 @@ public class SeedItem : MonoBehaviour
             {
                 GameObject rice = Instantiate(Rice, transform.position, Quaternion.identity, RicesTransform.transform);
                 PI.RemoveItem(Seeds);
-                GM.AddRice(rice);
+                GM.AddRice(rice, index);
                 //isSeed = false;
                 UIManager.HideButton(this);
             }

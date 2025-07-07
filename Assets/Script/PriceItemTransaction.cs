@@ -39,19 +39,19 @@ public class PriceItemTransaction : MonoBehaviour, IDropHandler
                 //return;
                 //Debug.Log("Carrot ada");
             }
-            else if (PI.itemTransaction(carrot, 1))
+            else if (PI.itemTransaction(carrot, 5))
             {
-                GameObject WheatObject = Instantiate(ImagePrefabs, positionResultSlot);
-                Image img = WheatObject.GetComponent<Image>();
-                img.sprite = wheat.Icon;
+                GameObject IronObject = Instantiate(ImagePrefabs, positionResultSlot);
+                Image img = IronObject.GetComponent<Image>();
+                img.sprite = Iron.Icon;
 
-                DragItem dragItem = WheatObject.AddComponent<DragItem>();
-                dragItem.itemData = wheat;
+                DragItem dragItem = IronObject.AddComponent<DragItem>();
+                dragItem.itemData = Iron;
                 dragItem.counts = 1;
-                dragItem.stackText = WheatObject.GetComponentInChildren<TextMeshProUGUI>();
+                dragItem.stackText = IronObject.GetComponentInChildren<TextMeshProUGUI>();
                 dragItem.UpdateText();
 
-                WheatObject.transform.localPosition = Vector3.zero;
+                IronObject.transform.localPosition = Vector3.zero;
             }
             else if (PI.itemTransaction(wheat, 10))
             {
@@ -67,19 +67,19 @@ public class PriceItemTransaction : MonoBehaviour, IDropHandler
 
                 GoldObject.transform.localPosition = Vector3.zero;
             }
-            else if (PI.itemTransaction(wheat, 5))
+            else if (PI.itemTransaction(carrot, 1))
             {
-                GameObject IronObject = Instantiate(ImagePrefabs, positionResultSlot);
-                Image img = IronObject.GetComponent<Image>();
-                img.sprite = Iron.Icon;
+                GameObject WheatObject = Instantiate(ImagePrefabs, positionResultSlot);
+                Image img = WheatObject.GetComponent<Image>();
+                img.sprite = wheat.Icon;
 
-                DragItem dragItem = IronObject.AddComponent<DragItem>();
-                dragItem.itemData = Iron;
+                DragItem dragItem = WheatObject.AddComponent<DragItem>();
+                dragItem.itemData = wheat;
                 dragItem.counts = 1;
-                dragItem.stackText = IronObject.GetComponentInChildren<TextMeshProUGUI>();
+                dragItem.stackText = WheatObject.GetComponentInChildren<TextMeshProUGUI>();
                 dragItem.UpdateText();
 
-                IronObject.transform.localPosition = Vector3.zero;
+                WheatObject.transform.localPosition = Vector3.zero;
             }
                 
             
